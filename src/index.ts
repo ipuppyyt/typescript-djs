@@ -38,11 +38,11 @@ if (config.useDB) {
 log('⏳ [LOADING]: Commands'.cyan);
 const commandsPath = join(__dirname, 'commands');
 const commandFiles = readdirSync(commandsPath).filter(file => file.endsWith('.ts'));
+const commandCount = commandFiles.length;
+debugmode && log(`📝 [DEBUG]: ${commandCount} command${commandCount > 1 ? 's' : ''} found.`.magenta.bold);
 
 for (const file of commandFiles) {
     const filePath = join(commandsPath, file);
-    const commandCount = commandFiles.length;
-    debugmode && log(`📝 [DEBUG]: ${commandCount} command${commandCount > 1 ? 's' : ''} found.`.magenta.bold);
     import(pathToFileURL(filePath).toString()).then(({ default: command }) => {
         if (command.command === false) return;
         if (command.data && command.execute) {
@@ -56,11 +56,11 @@ log('✔️  [LOADING]: Commands Complete'.green);
 console.log('⏳ [LOADING]: Events'.cyan);
 const eventsPath = join(__dirname, 'events');
 const eventFiles = readdirSync(eventsPath).filter(file => file.endsWith('.ts'));
+const eventCount = eventFiles.length;
+debugmode && log(`📝 [DEBUG]: ${eventCount} event${eventCount > 1 ? 's' : ''} found.`.magenta.bold);
 
 for (const file of eventFiles) {
     const filePath = join(eventsPath, file);
-    const eventCount = eventFiles.length;
-    debugmode && log(`📝 [DEBUG]: ${eventCount} event${eventCount > 1 ? 's' : ''} found.`.magenta.bold);
     import(pathToFileURL(filePath).toString()).then(({ default: event }) => {
         if (event.name) {
             if (event.once) {
@@ -78,11 +78,11 @@ log('✔️  [LOADING]: Events Complete'.green);
 log('⏳ [LOADING]: Handlers'.cyan);
 const handlersPath = join(__dirname, 'handlers');
 const handlerFiles = readdirSync(handlersPath).filter(file => file.endsWith('.ts'));
+const handlerCount = handlerFiles.length;
+debugmode && log(`📝 [DEBUG]: ${handlerCount} handler${handlerCount > 1 ? 's' : ''} found.`.magenta.bold);
 
 for (const file of handlerFiles) {
     const filePath = join(handlersPath, file);
-    const handlerCount = handlerFiles.length;
-    debugmode && log(`📝 [DEBUG]: ${handlerCount} handler${handlerCount > 1 ? 's' : ''} found.`.magenta.bold);
     import(pathToFileURL(filePath).toString()).then(({ default: handler }) => {
         if (handler.name && handler.execute) {
             client.on(handler.name, (...args) => handler.execute(...args, client));
