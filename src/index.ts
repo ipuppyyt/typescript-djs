@@ -2,7 +2,7 @@ import { Client, GatewayIntentBits } from 'discord.js';
 import { clear, error, log, warn } from 'console';
 import { existsSync, readdirSync } from 'fs';
 import { connectToDB } from './utils';
-import config from './config';
+import config from '../config';
 import { join } from 'path';
 import 'colors';
 
