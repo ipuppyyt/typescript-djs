@@ -8,6 +8,9 @@
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white)
 ![Discord.js](https://img.shields.io/badge/Discord.js-v14.16.3-7289DA?style=flat&logo=discord&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-v18.0.0-339933?style=flat&logo=node.js&logoColor=white)
+![License](https://img.shields.io/badge/license-ISC-blue.svg?style=flat)
+![Issues](https://img.shields.io/github/issues/ipuppyyt/typescript-djs?style=flat)
+![Last Commit](https://img.shields.io/github/last-commit/ipuppyyt/typescript-djs?style=flat)
 
 A simple and elegant Discord bot template built with TypeScript, designed to help you get started with your own Discord bot quickly and easily.
 </div>
