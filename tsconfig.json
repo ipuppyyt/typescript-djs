@@ -5,15 +5,18 @@
         "moduleResolution": "Node",
         "strict": true,
         "noImplicitAny": true,
+        "esModuleInterop": true,
         "declaration": false,
         "skipLibCheck": true,
         "strictNullChecks": true,
         "resolveJsonModule": true,
-        "outDir": "dist"
+        "removeComments": true,
+        "outDir": "./dist"
     },
     "include": [
         "src",
-        "config.ts"
+        "config.ts",
+        "src/index.ts"
     ],
     "exclude": [
         "node_modules"

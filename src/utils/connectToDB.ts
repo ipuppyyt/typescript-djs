@@ -2,10 +2,11 @@ import mongoose from "mongoose";
 import config from "../../config";
 import { error, log } from "console";
 
-async function connectToDB() {
-    await mongoose.connect(config.db.uri, config.db.options)
+export default async function connectToDB() {
+    if (!config.db.uri) {
+        throw new Error("Database URI is not defined");
+    }
+    await mongoose.connect(config.db.uri)
         .then(() => log('✔️  [MONGODB]: Connected'.green))
         .catch((err) => error(`❌ [MONGODB]: ${err.message}`.red));
 }
-
-export default connectToDB;
