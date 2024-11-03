@@ -1,15 +1,27 @@
 {
-    "name": "ts-bot",
+    "name": "typescript-djs",
     "version": "1.0.2",
-    "description": "",
+    "description": "A simple discord bot template using typescript.",
+    "author": "iPuppyYT",
     "main": "dist/index.js",
     "scripts": {
         "dev": "cross-env NODE_ENV=dev tsx watch src/index.ts",
         "start": "cross-env NODE_ENV=prod tsx src/index.ts"
     },
-    "keywords": [],
-    "author": "",
+    "keywords": [
+        "discord",
+        "bot",
+        "typescript"
+    ],
+    "homepage": "https://github.com/ipuppyyt/typescript-djs#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ipuppyyt/typescript-djs.git"
+    },
     "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/ipuppyyt/typescript-djs/issues"
+    },
     "dependencies": {
         "@discordjs/builders": "^1.9.0",
         "colors": "^1.4.0",
