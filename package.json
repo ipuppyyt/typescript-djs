@@ -1,18 +1,21 @@
 {
     "name": "typescript-djs",
     "version": "1.0.2",
-    "description": "A simple discord bot template using typescript.",
+    "description": "A simple discord bot template using TypeScript with a web dashboard.",
     "author": "iPuppyYT",
     "main": "dist/index.js",
     "scripts": {
-        "dev": "cross-env NODE_ENV=dev tsx watch src/index.ts",
+        "dev": "cross-env VITE_CJS_IGNORE_WARNING=true concurrently \"cross-env NODE_ENV=dev tsx watch src/index.ts\" \"cross-env VITE_CJS_TRACE=true vite --host --config views/vite.config.ts\"",
         "start": "cross-env NODE_ENV=prod tsx src/index.ts",
-        "test": "tsc"
+        "test": "tsc",
+        "build:views": "cross-env VITE_CJS_IGNORE_WARNING=true vite build --config views/vite.config.ts",
+        "build": "pnpm run build:views"
     },
     "keywords": [
         "discord",
         "bot",
-        "typescript"
+        "typescript",
+        "dashboard"
     ],
     "homepage": "https://github.com/ipuppyyt/typescript-djs#readme",
     "repository": {
@@ -25,15 +28,31 @@
     },
     "dependencies": {
         "@discordjs/builders": "^1.9.0",
+        "@vitejs/plugin-react": "^4.3.3",
+        "axios": "^1.7.7",
         "colors": "^1.4.0",
+        "concurrently": "^9.0.1",
         "discord.js": "^14.16.3",
         "dotenv": "^16.4.5",
-        "mongoose": "^8.8.0"
+        "mongoose": "^8.8.0",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1",
+        "react-router-dom": "^6.27.0",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.6.3",
+        "vite": "^5.4.10"
     },
     "devDependencies": {
         "@types/node": "^22.8.7",
+        "@types/react": "^18.3.12",
+        "@types/react-dom": "^18.3.1",
+        "autoprefixer": "^10.4.20",
         "cross-env": "^7.0.3",
+        "postcss": "^8.4.47",
         "rimraf": "^6.0.1",
-        "tsx": "^4.19.2"
+        "sass-embedded": "^1.80.6",
+        "tailwindcss": "^3.4.14",
+        "tsx": "^4.19.2",
+        "vite-plugin-react": "^4.0.1"
     }
 }

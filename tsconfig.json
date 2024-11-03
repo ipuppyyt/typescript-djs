@@ -1,7 +1,7 @@
 {
     "compilerOptions": {
         "target": "ES2022",
-        "module": "CommonJS",
+        "module": "ESNext",
         "moduleResolution": "Node",
         "strict": true,
         "noImplicitAny": true,
@@ -11,14 +11,16 @@
         "strictNullChecks": true,
         "resolveJsonModule": true,
         "removeComments": true,
-        "outDir": "./dist"
+        "outDir": "./dist",
+        "jsx": "react-jsx"
     },
     "include": [
-        "src",
+        "src/**/*",
         "config.ts",
-        "src/index.ts"
+        "views/src/**/*"
     ],
     "exclude": [
-        "node_modules"
+        "node_modules",
+        "dist"
     ]
 }
