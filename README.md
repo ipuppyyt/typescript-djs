@@ -1,11 +1,15 @@
 <div style="text-align: center;">
 
 # TypeScript Discord Bot Template
+
 </div>
 
 <div style="text-align: center;">
 
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=flat&logo=vite&logoColor=white)
+![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=flat&logo=SASS&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=flat&&logo=tailwind-css&logoColor=white)
 ![Discord.js](https://img.shields.io/badge/Discord.js-v14.16.3-7289DA?style=flat&logo=discord&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-v18.0.0-339933?style=flat&logo=node.js&logoColor=white)
 ![License](https://img.shields.io/badge/license-ISC-blue.svg?style=flat)
@@ -14,6 +18,7 @@
 [![Tests](https://github.com/ipuppyyt/typescript-djs/actions/workflows/test.yml/badge.svg)](https://github.com/ipuppyyt/typescript-djs/actions/workflows/test.yml)
 
 A simple and elegant Discord bot template built with TypeScript, designed to help you get started with your own Discord bot quickly and easily.
+
 </div>
 
 ## Table of Contents
@@ -50,13 +55,17 @@ npm install
 ## Usage
 
 ### Development
+
 To start the bot in development mode, run:
+
 ```bash
 npm run dev
 ```
 
 ### Production
+
 To start the bot in production mode, run:
+
 ```
 npm start
 ```
